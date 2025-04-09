@@ -48,7 +48,51 @@ const Dashboard = () => {
             <div style={styles.deliveryCard}>
                 <p>Total Delivery</p>
             </div>
-        </div>       
+        </div>
+        <h1 style={styles.heading}>Delivery Reports</h1>       
+        <div style={styles.report}>
+            <div style={styles.reportCard}>
+                <p>All Delivery</p>
+            </div>
+            <div style={styles.reportCard}>
+                <p>Om Progress Delivery</p>
+            </div>
+            <div style={styles.reportCard}>
+                <p>Successful</p>
+            </div>
+            <div style={styles.reportCard}>
+                <p>On Hold Delivery</p>
+            </div>
+            <div style={styles.reportCard}>
+                <p>Cancelled Delivery</p>
+            </div>
+            <div style={styles.reportCard}>
+                <p>Refund</p>
+            </div>
+        </div>
+        <hr style={{ margin: '20px 0' }} />
+        <div style={styles.express}>
+            <p>Express Delivery</p>
+            <div style={styles.courier}>
+                <div style={styles.courierText}>
+                    <p style={{ marginRight: '20px' }}>Courier Information</p>
+                </div>
+                <div style={styles.courierText}>
+                    <p>Item Information</p>
+                </div>
+            </div>
+            <div>
+                <p>Delivery Information </p> 
+            <div style={styles.courier}>
+                <div style={styles.courierText}>
+                    <p style={{ marginRight: '20px' }}>Courier Information</p>
+                </div>
+                <div style={styles.courierText}>
+                    <p>Item Information</p>
+                </div>
+            </div>
+            </div>
+        </div>
       </div>
     </div>
   );
@@ -57,6 +101,18 @@ const Dashboard = () => {
 const styles = {
   wrapper: {
     display: 'flex',
+  },
+  courier: {
+    display: 'flex',
+    backgroundColor: '#f9f9f9',
+    borderRadius: '8px',
+    border: '1px solid #ccc',
+    
+  },
+  courierText: {
+    backgroundColor: '#f9f9f9',
+    textAlign: 'center',
+
   },
   content: {
     padding: '2rem',
@@ -125,6 +181,16 @@ const styles = {
     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
     transition: 'transform 0.2s, box-shadow 0.2s',
     cursor: 'pointer',
+},
+report: {
+    display: 'flex',
+    gridTemplateColumns: 'repeat(4, 1fr)',
+    gap: '1rem',
+},
+express: {
+    boder: '5px solid rgb(0, 0, 0)',
+    borderRadius: '8px',
+    backgroundColor: 'rgba(255, 149, 0, 1)',
 },
 };
 
